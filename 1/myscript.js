@@ -24,9 +24,10 @@ function parseIntPrompt(){
   for(j=0; j < 5; j++){
     giocata = parseInt(prompt('Inserisci un numero'));
     console.log(giocata);
+    numeriGiocati.push(giocata);
   }
+  console.log(numeriGiocati);
 }
-
 
 // faccio comparire 5 prompt
 
