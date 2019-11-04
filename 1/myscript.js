@@ -5,15 +5,15 @@
 
 var daIndovinare = []; // dispongo l'array vuoto
 var numeriGiocati = []; // numeri giocati dall'utente
+var punteggio = 0 // punteggio di partenza
 
 var giocata; // il numero giocato dall'utente dopo i 30 secondi
 
 for (i = 0; i < 5; i++){
   var numero = numRandom(1,1000); // invoco la funzione (da 1 a 1000 per comodità)
-  console.log(numero);
   daIndovinare.push(numero);
 }
-console.log(daIndovinare);
+console.log('i numeri da indovinare sono: ' , daIndovinare);
 alert(daIndovinare); // li metto in un alert
 
 // faccio passare 30 secondi
@@ -21,18 +21,16 @@ alert(daIndovinare); // li metto in un alert
 setTimeout(parseIntPrompt, 3000);
 
 function parseIntPrompt(){
-  for(j=0; j < 5; j++){
+  for(j=0; j < 5; j++){ // faccio comparire 5 prompt
     giocata = parseInt(prompt('Inserisci un numero'));
-    console.log(giocata);
-    numeriGiocati.push(giocata);
+    numeriGiocati.push(giocata); // metto questi 5 numeri in un array
+    if (daIndovinare.includes(giocata) == true){
+      punteggio = punteggio + 1
+    }
   }
-  console.log(numeriGiocati);
+  console.log('Hai indovinato ' + punteggio + ' numeri');
+  console.log('i numeri giocati sono: ' , numeriGiocati);
 }
-
-// faccio comparire 5 prompt
-
-
-// metto questi 5 numeri in un array
 
 // vedo quali e quanti sono uguali
 
