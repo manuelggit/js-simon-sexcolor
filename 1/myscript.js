@@ -6,6 +6,7 @@
 var daIndovinare = []; // dispongo l'array vuoto
 var numeriGiocati = []; // numeri giocati dall'utente
 var punteggio = 0 // punteggio di partenza
+var numeriIndovinati = []; // array dei numeri indovinati
 
 var giocata; // il numero giocato dall'utente dopo i 30 secondi
 
@@ -26,9 +27,11 @@ function parseIntPrompt(){
     numeriGiocati.push(giocata); // metto questi 5 numeri in un array
     if (daIndovinare.includes(giocata) == true){
       punteggio = punteggio + 1
+      numeriIndovinati.push(giocata);
     }
   }
   console.log('Hai indovinato ' + punteggio + ' numeri');
+  console.log('Numeri indovinati ' , numeriIndovinati);
   console.log('i numeri giocati sono: ' , numeriGiocati);
 }
 
