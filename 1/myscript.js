@@ -2,7 +2,13 @@
 // Dopo 30 secondi l’utente deve inserire un prompt alla volta i numeri che ha visto precedentemente. Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati;
 
 // genero 5 numeri casuali
+
+var numero = numRandom(1,1000); // invoco la funzione (da 1 a 1000 per comodità)
+console.log(numero);
+
 // li metto in un array
+
+var daIndovinare = []; // dispongo l'array vuoto
 
 // li metto in un alert
 
@@ -12,3 +18,11 @@
 // metto questi 5 numeri in un array
 
 // vedo quali e quanti sono uguali
+
+// FUNZIONI
+
+// funzione random
+function numRandom(min, max) {
+  // il computer genera il suo numero
+  return Math.floor((Math.random() * (max - min + 1)) + min);
+}
