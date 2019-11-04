@@ -6,5 +6,12 @@ console.log(nome);
 var sesso = prompt('Maschio o femmina?');
 console.log(sesso);
 
+if(sesso == 'm'){
+  document.getElementById('nome').style.color = 'blue';
+} else if (sesso == 'f'){
+  document.getElementById('nome').style.color = 'pink';
+} else {
+  document.getElementById('nome').style.color = 'black';
+}
+
 document.getElementById('nome').innerHTML = nome;
-document.getElementById('nome').style.color = 'red';
