@@ -4,6 +4,9 @@
 // genero 5 numeri casuali e li metto in un array
 
 var daIndovinare = []; // dispongo l'array vuoto
+var numeriGiocati = []; // numeri giocati dall'utente
+
+var giocata; // il numero giocato dall'utente dopo i 30 secondi
 
 for (i = 0; i < 5; i++){
   var numero = numRandom(1,1000); // invoco la funzione (da 1 a 1000 per comodità)
@@ -11,15 +14,20 @@ for (i = 0; i < 5; i++){
   daIndovinare.push(numero);
 }
 console.log(daIndovinare);
-alert(daIndovinare);
-
-setTimeout(parseIntPrompt, 30000);
-
-// li metto in un alert
+alert(daIndovinare); // li metto in un alert
 
 // faccio passare 30 secondi
 
+setTimeout(parseIntPrompt, 3000);
+
+function parseIntPrompt(){
+  giocata = parseInt(prompt('Inserisci un numero'));
+  console.log(giocata);
+}
+
 // faccio comparire 5 prompt
+
+
 // metto questi 5 numeri in un array
 
 // vedo quali e quanti sono uguali
@@ -30,9 +38,4 @@ setTimeout(parseIntPrompt, 30000);
 function numRandom(min, max) {
   // il computer genera il suo numero
   return Math.floor((Math.random() * (max - min + 1)) + min);
-}
-
-// funzione parseIntPrompt
-function parseIntPrompt(){
-  parseInt(prompt('Inserisci un numero'));
 }
