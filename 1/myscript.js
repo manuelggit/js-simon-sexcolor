@@ -11,11 +11,9 @@ for (i = 0; i < 5; i++){
   daIndovinare.push(numero);
 }
 console.log(daIndovinare);
+alert(daIndovinare);
 
-
-
-
-
+setTimeout(parseIntPrompt, 30000);
 
 // li metto in un alert
 
@@ -32,4 +30,9 @@ console.log(daIndovinare);
 function numRandom(min, max) {
   // il computer genera il suo numero
   return Math.floor((Math.random() * (max - min + 1)) + min);
+}
+
+// funzione parseIntPrompt
+function parseIntPrompt(){
+  parseInt(prompt('Inserisci un numero'));
 }
