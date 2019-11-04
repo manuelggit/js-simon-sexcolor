@@ -21,9 +21,12 @@ alert(daIndovinare); // li metto in un alert
 setTimeout(parseIntPrompt, 3000);
 
 function parseIntPrompt(){
-  giocata = parseInt(prompt('Inserisci un numero'));
-  console.log(giocata);
+  for(j=0; j < 5; j++){
+    giocata = parseInt(prompt('Inserisci un numero'));
+    console.log(giocata);
+  }
 }
+
 
 // faccio comparire 5 prompt
 
